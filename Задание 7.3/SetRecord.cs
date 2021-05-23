@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Задание_7._3
 {
-    public partial class Form4 : Form
+    public partial class SetRecord : Form
     {
-        private Form1 form1;
-        public Form4(Form1 form1)
+        private Game form1;
+        public SetRecord(Game form1)
         {
             InitializeComponent();
             this.form1 = form1;

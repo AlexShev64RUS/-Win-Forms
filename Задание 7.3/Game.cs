@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Задание_7._3
 {
-    public partial class Form1 : Form
+    public partial class Game : Form
     {
         private static Image[,] images = new Image[,]
         {
@@ -28,12 +28,12 @@ namespace Задание_7._3
         private bool isAbleToRun = true;
         private bool isPressedShift = false;
         private int stamina = 6000;
-        private Form2 form2;
+        private Menu form2;
         private Record[] records = new Record[11];
         private String name;
 
 
-        public Form1(Form2 form2)
+        public Game(Menu form2)
         {
             InitializeComponent();
             MessageBox.Show("Правила: соберите как можно больше яблок.");
@@ -149,7 +149,7 @@ namespace Задание_7._3
             {
                 timer2.Enabled = false;
                 MessageBox.Show("Время вышло");
-                new Form4(this).ShowDialog();
+                new SetRecord(this).ShowDialog();
                 records[10] = new Record(name, Int32.Parse(scopes.Text));
                 Array.Sort(records);
                 StreamWriter f = new StreamWriter("Records.txt");

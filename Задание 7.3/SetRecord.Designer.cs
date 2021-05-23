@@ -1,7 +1,7 @@
 ﻿
 namespace Задание_7._3
 {
-    partial class Form4
+    partial class SetRecord
     {
         /// <summary>
         /// Required designer variable.
@@ -63,7 +63,7 @@ namespace Задание_7._3
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form4
+            // SetRecord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -72,7 +72,7 @@ namespace Задание_7._3
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form4";
+            this.Name = "SetRecord";
             this.Text = "Form4";
             this.ResumeLayout(false);
             this.PerformLayout();

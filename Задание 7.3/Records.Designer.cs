@@ -1,7 +1,7 @@
 ﻿
 namespace Задание_7._3
 {
-    partial class Form3
+    partial class Recods
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Задание_7._3
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Recods));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelName10 = new System.Windows.Forms.Label();
@@ -534,7 +534,7 @@ namespace Задание_7._3
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             this.buttonBack.KeyDown += new System.Windows.Forms.KeyEventHandler(this.buttonBack_KeyDown);
             // 
-            // Form3
+            // Recods
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -544,7 +544,7 @@ namespace Задание_7._3
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form3";
+            this.Name = "Recods";
             this.Text = "Form3";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form3_Load);

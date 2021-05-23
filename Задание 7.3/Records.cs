@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace Задание_7._3
 {
-    public partial class Form3 : Form
+    public partial class Recods : Form
     {
 
         private Record[] records = new Record[10];
-        private Form2 form2;
-        public Form3(Form2 form2)
+        private Menu form2;
+        public Recods(Menu form2)
         {
             InitializeComponent();
             this.form2 = form2;

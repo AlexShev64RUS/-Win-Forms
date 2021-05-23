@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Задание_7._3
 {
-    public partial class Form2 : Form
+    public partial class Menu : Form
     {
-        public Form2()
+        public Menu()
         {
             InitializeComponent();
             pictureBox1.Location = new Point((Screen.PrimaryScreen.Bounds.Width - pictureBox1.Width) / 2, pictureBox1.Location.Y);
@@ -23,7 +23,7 @@ namespace Задание_7._3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new Form3(this).Show();
+            new Recods(this).Show();
             Enabled = false;
             Visible = false;
         }
@@ -35,7 +35,7 @@ namespace Задание_7._3
 
         private void buttonPlay_Click(object sender, EventArgs e)
         {
-            new Form1(this).Show();
+            new Game(this).Show();
             Enabled = false;
             Visible = false;
         }
