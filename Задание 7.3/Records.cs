@@ -15,11 +15,11 @@ namespace Задание_7._3
     {
 
         private Record[] records = new Record[10];
-        private Menu form2;
-        public Recods(Menu form2)
+        private Menu menu;
+        public Recods(Menu menu)
         {
             InitializeComponent();
-            this.form2 = form2;
+            this.menu = menu;
             pictureBox1.Location = new Point((Screen.PrimaryScreen.Bounds.Width - pictureBox1.Width) / 2, pictureBox1.Location.Y);
             panel1.Location = new Point((Screen.PrimaryScreen.Bounds.Width - panel1.Width) / 2, panel1.Location.Y);
         }
@@ -28,7 +28,16 @@ namespace Задание_7._3
         {
             Label[] labelsScopes = { labelScopes1, labelScopes2, labelScopes3, labelScopes4, labelScopes5, labelScopes6, labelScopes7, labelScopes8, labelScopes9, labelScopes10 };
             Label[] labelsNames = { labelName1, labelName2, labelName3, labelName4, labelName5, labelName6, labelName7, labelName8, labelName9, labelName10 };
-            StreamReader f = new StreamReader("Records.txt");
+            StreamReader f;
+            try
+            {
+                f = new StreamReader("Records.txt");
+            }
+            catch
+            {
+                createRecordsFile();
+                f = new StreamReader("Records.txt");
+            }
             string str;
             string[] buf;
             for (int i = 0; i < 10; i++)
@@ -38,6 +47,14 @@ namespace Задание_7._3
                 labelsNames[i].Text = buf[0];
                 labelsScopes[i].Text = Int32.Parse(buf[1]).ToString();
             }
+            f.Close();
+        }
+
+        public static void createRecordsFile()
+        {
+            StreamWriter f = new StreamWriter("Records.txt");
+            for (int i = 0; i < 10; i++)
+                f.WriteLine("{0};{1}", "-", 0);
             f.Close();
         }
 
@@ -54,8 +71,8 @@ namespace Задание_7._3
         private void buttonBack_Click(object sender, EventArgs e)
         {
             Close();
-            form2.Visible = true;
-            form2.Enabled = true;
+            menu.Visible = true;
+            menu.Enabled = true;
         }
 
         private void buttonBack_KeyDown(object sender, KeyEventArgs e)

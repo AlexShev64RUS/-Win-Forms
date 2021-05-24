@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{6A529348-B19A-41B1-BB97-F0C112FB3CA1}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Задание_7._3</RootNamespace>
-    <AssemblyName>Задание 7.3</AssemblyName>
+    <RootNamespace>AppleHunter</RootNamespace>
+    <AssemblyName>AppleHunter</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Component1.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Component1.Designer.cs">
-      <DependentUpon>Component1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Game.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,13 +86,16 @@
       <DependentUpon>SetRecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -112,6 +109,57 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boy1r3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boy1r4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boy1u1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boy1u2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boy1u3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boy1u4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boy1d1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boy1d2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boy1d3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boy1d4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boy1l1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boy1l2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boy1l3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boy1l4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boy1r1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boy1r2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apple.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

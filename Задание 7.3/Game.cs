@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AppleHunter.Properties;
 
 namespace Задание_7._3
 {
@@ -15,10 +16,10 @@ namespace Задание_7._3
     {
         private static Image[,] images = new Image[,]
         {
-            { new Bitmap("frames/u1.png"), new Bitmap("frames/u2.png"), new Bitmap("frames/u3.png"), new Bitmap("frames/u4.png") },
-            { new Bitmap("frames/l1.png"), new Bitmap("frames/l2.png"), new Bitmap("frames/l3.png"), new Bitmap("frames/l4.png") },
-            { new Bitmap("frames/d1.png"), new Bitmap("frames/d2.png"), new Bitmap("frames/d3.png"), new Bitmap("frames/d4.png") },
-            { new Bitmap("frames/r1.png"), new Bitmap("frames/r2.png"), new Bitmap("frames/r3.png"), new Bitmap("frames/r4.png") }
+            { Resources.boy1u1, Resources.boy1u2, Resources.boy1u3, Resources.boy1u4 },
+            { Resources.boy1l1, Resources.boy1l2, Resources.boy1l3, Resources.boy1l4 },
+            { Resources.boy1d1, Resources.boy1d2, Resources.boy1d3, Resources.boy1d4 },
+            { Resources.boy1r1, Resources.boy1r2, Resources.boy1r3, Resources.boy1r4 }
         };
         private List<PictureBox> pictureBoxes = new List<PictureBox>();
         private Random rnd = new Random();
@@ -28,19 +29,29 @@ namespace Задание_7._3
         private bool isAbleToRun = true;
         private bool isPressedShift = false;
         private int stamina = 6000;
-        private Menu form2;
+        private Menu menu;
         private Record[] records = new Record[11];
         private String name;
 
 
-        public Game(Menu form2)
+        public Game(Menu menu)
         {
             InitializeComponent();
             MessageBox.Show("Правила: соберите как можно больше яблок.");
+            pictureBox1.Image = images[2, 0];
             pictureBox1.Location = new Point((Screen.PrimaryScreen.Bounds.Width - pictureBox1.Width) / 2, (Screen.PrimaryScreen.Bounds.Height - pictureBox1.Height) / 2);
             timer2.Enabled = true;
-            this.form2 = form2;
-            StreamReader f = new StreamReader("Records.txt");
+            this.menu = menu;
+            StreamReader f;
+            try
+            {
+                f = new StreamReader("Records.txt");
+            }
+            catch
+            {
+                Recods.createRecordsFile();
+                f = new StreamReader("Records.txt");
+            }
             string str;
             string[] buf;
             for (int i = 0; i < 10; i++)
@@ -162,7 +173,7 @@ namespace Задание_7._3
             if (estTime % 2 == 1)
             {
                 PictureBox pb = new PictureBox();
-                pb.Image = new Bitmap("apple.png");
+                pb.Image = Resources.apple;
                 pb.Size = new Size(24, 24);
                 pb.SizeMode = PictureBoxSizeMode.Zoom;
                 pb.BackColor = Color.Transparent;
@@ -175,8 +186,8 @@ namespace Задание_7._3
         private void exitGame()
         {
             Close();
-            form2.Visible = true;
-            form2.Enabled = true;
+            menu.Visible = true;
+            menu.Enabled = true;
         }
 
         private void timer3_Tick(object sender, EventArgs e)
@@ -197,11 +208,6 @@ namespace Задание_7._3
                 if (stamina >= 1200)
                     isAbleToRun = true;
             }
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
 
         public void setName(String name)
