@@ -1,5 +1,5 @@
 ﻿
-namespace Задание_7._3
+namespace AppleHunter
 {
     partial class Game
     {
@@ -194,8 +194,8 @@ namespace Задание_7._3
             this.Name = "Game";
             this.Text = "Игра";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Game_OnInteract);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Menu_StopInteract);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();

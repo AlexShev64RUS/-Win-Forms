@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Задание 7.3", "Задание 7.3\Задание 7.3.csproj", "{6A529348-B19A-41B1-BB97-F0C112FB3CA1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppleHunter", "AppleHunter\AppleHunter.csproj", "{6A529348-B19A-41B1-BB97-F0C112FB3CA1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

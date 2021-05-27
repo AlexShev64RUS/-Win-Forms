@@ -1,5 +1,5 @@
 ﻿
-namespace Задание_7._3
+namespace AppleHunter
 {
     partial class SetRecord
     {
@@ -61,7 +61,7 @@ namespace Задание_7._3
             this.button1.TabIndex = 2;
             this.button1.Text = "Подтвердить";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.buttonSaveRecord_Click);
             // 
             // SetRecord
             // 

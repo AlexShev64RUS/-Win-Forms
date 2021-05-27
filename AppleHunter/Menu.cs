@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-namespace Задание_7._3
+namespace AppleHunter
 {
     public partial class Menu : Form
     {
@@ -21,14 +15,14 @@ namespace Задание_7._3
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonRecords_Click(object sender, EventArgs e)
         {
-            new Recods(this).Show();
+            new Records(this).Show();
             Enabled = false;
             Visible = false;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonExit_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -40,7 +34,7 @@ namespace Задание_7._3
             Visible = false;
         }
 
-        private void Form2_KeyDown(object sender, KeyEventArgs e)
+        private void menu_OnEscape(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
                 Close();
