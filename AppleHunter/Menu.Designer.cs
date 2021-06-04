@@ -1,5 +1,5 @@
 ﻿
-namespace Задание_7._3
+namespace AppleHunter
 {
     partial class Menu
     {
@@ -72,7 +72,7 @@ namespace Задание_7._3
             this.buttonRecords.TabIndex = 2;
             this.buttonRecords.Text = "РЕКОРДЫ";
             this.buttonRecords.UseVisualStyleBackColor = true;
-            this.buttonRecords.Click += new System.EventHandler(this.button1_Click);
+            this.buttonRecords.Click += new System.EventHandler(this.buttonRecords_Click);
             // 
             // buttonClose
             // 
@@ -85,7 +85,7 @@ namespace Задание_7._3
             this.buttonClose.TabIndex = 3;
             this.buttonClose.Text = "ВЫХОД";
             this.buttonClose.UseVisualStyleBackColor = true;
-            this.buttonClose.Click += new System.EventHandler(this.button2_Click);
+            this.buttonClose.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // Menu
             // 
@@ -101,7 +101,7 @@ namespace Задание_7._3
             this.Name = "Menu";
             this.Text = "Form2";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form2_KeyDown);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.menu_OnEscape);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
